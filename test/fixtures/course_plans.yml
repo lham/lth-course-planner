@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  programme_id: 
+  name: MyText
+  abbr: MyText
+  type: MyText
+
+two:
+  programme_id: 
+  name: MyText
+  abbr: MyText
+  type: MyText

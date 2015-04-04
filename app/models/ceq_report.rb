@@ -1,4 +1,6 @@
 class CeqReport < ActiveRecord::Base
+  belongs_to :course_instance
+
   validates 'registered_students',  presence: true, numericality: { greater_than_or_equal_to: 0 }
   validates 'passed_students',      presence: true, numericality: { greater_than_or_equal_to: 0 }
   validates 'answers_all',          presence: true, numericality: { greater_than_or_equal_to: 0 }

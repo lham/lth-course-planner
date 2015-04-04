@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  year: MyString
+  education_board: MyString
+  department: MyString
+  suitable_exchange: false
+  language: MyString
+  required_knowledge: false
+  assumed_knowledge: false
+  limited_participants: false
+  mandatory: MyString
+  allowed_from_year: 1
+  included_in_year: 1
+  study_period: 
+
+two:
+  year: MyString
+  education_board: MyString
+  department: MyString
+  suitable_exchange: false
+  language: MyString
+  required_knowledge: false
+  assumed_knowledge: false
+  limited_participants: false
+  mandatory: MyString
+  allowed_from_year: 1
+  included_in_year: 1
+  study_period: 

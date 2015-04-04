@@ -1,0 +1,64 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @course_instance.year %>
+</p>
+
+<p>
+  <strong>Education board:</strong>
+  <%= @course_instance.education_board %>
+</p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @course_instance.department %>
+</p>
+
+<p>
+  <strong>Suitable exchange:</strong>
+  <%= @course_instance.suitable_exchange %>
+</p>
+
+<p>
+  <strong>Language:</strong>
+  <%= @course_instance.language %>
+</p>
+
+<p>
+  <strong>Required knowledge:</strong>
+  <%= @course_instance.required_knowledge %>
+</p>
+
+<p>
+  <strong>Assumed knowledge:</strong>
+  <%= @course_instance.assumed_knowledge %>
+</p>
+
+<p>
+  <strong>Limited participants:</strong>
+  <%= @course_instance.limited_participants %>
+</p>
+
+<p>
+  <strong>Mandatory:</strong>
+  <%= @course_instance.mandatory %>
+</p>
+
+<p>
+  <strong>Allowed from year:</strong>
+  <%= @course_instance.allowed_from_year %>
+</p>
+
+<p>
+  <strong>Included in year:</strong>
+  <%= @course_instance.included_in_year %>
+</p>
+
+<p>
+  <strong>Study period:</strong>
+  <%= @course_instance.study_period %>
+</p>
+
+<%= link_to 'Edit', edit_course_instance_path(@course_instance) %> |
+<%= link_to 'Back', course_instances_path %>

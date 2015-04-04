@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Course plan:</strong>
+  <%= @course_plan_instance.course_plan %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @course_plan_instance.year %>
+</p>
+
+<%= link_to 'Edit', edit_course_plan_instance_path(@course_plan_instance) %> |
+<%= link_to 'Back', course_plan_instances_path %>

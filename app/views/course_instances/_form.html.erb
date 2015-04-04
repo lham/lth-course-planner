@@ -1,0 +1,65 @@
+<%= form_for(@course_instance) do |f| %>
+  <% if @course_instance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@course_instance.errors.count, "error") %> prohibited this course_instance from being saved:</h2>
+
+      <ul>
+      <% @course_instance.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :year %><br>
+    <%= f.text_field :year %>
+  </div>
+  <div class="field">
+    <%= f.label :education_board %><br>
+    <%= f.text_field :education_board %>
+  </div>
+  <div class="field">
+    <%= f.label :department %><br>
+    <%= f.text_field :department %>
+  </div>
+  <div class="field">
+    <%= f.label :suitable_exchange %><br>
+    <%= f.check_box :suitable_exchange %>
+  </div>
+  <div class="field">
+    <%= f.label :language %><br>
+    <%= f.text_field :language %>
+  </div>
+  <div class="field">
+    <%= f.label :required_knowledge %><br>
+    <%= f.check_box :required_knowledge %>
+  </div>
+  <div class="field">
+    <%= f.label :assumed_knowledge %><br>
+    <%= f.check_box :assumed_knowledge %>
+  </div>
+  <div class="field">
+    <%= f.label :limited_participants %><br>
+    <%= f.check_box :limited_participants %>
+  </div>
+  <div class="field">
+    <%= f.label :mandatory %><br>
+    <%= f.text_field :mandatory %>
+  </div>
+  <div class="field">
+    <%= f.label :allowed_from_year %><br>
+    <%= f.number_field :allowed_from_year %>
+  </div>
+  <div class="field">
+    <%= f.label :included_in_year %><br>
+    <%= f.number_field :included_in_year %>
+  </div>
+  <div class="field">
+    <%= f.label :study_period %><br>
+    <%= f.text_field :study_period %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

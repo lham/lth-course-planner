@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150404181822) do
+ActiveRecord::Schema.define(version: 20150404221603) do
 
   create_table "ceq_reports", force: :cascade do |t|
     t.integer  "registered_students"
@@ -44,6 +44,66 @@ ActiveRecord::Schema.define(version: 20150404181822) do
     t.text     "comments_by_programme_director"
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
+    t.integer  "course_instance_id"
+  end
+
+  create_table "course_instances", force: :cascade do |t|
+    t.string   "year"
+    t.string   "education_board"
+    t.string   "department"
+    t.boolean  "suitable_exchange"
+    t.string   "language"
+    t.boolean  "required_knowledge"
+    t.boolean  "assumed_knowledge"
+    t.boolean  "limited_participants"
+    t.string   "mandatory"
+    t.integer  "allowed_from_year"
+    t.integer  "included_in_year"
+    t.integer  "study_period"
+    t.integer  "course_id"
+    t.integer  "course_plan_instance_id"
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
+
+  add_index "course_instances", ["course_id"], name: "index_course_instances_on_course_id"
+  add_index "course_instances", ["course_plan_instance_id"], name: "index_course_instances_on_course_plan_instance_id"
+
+  create_table "course_plan_instances", force: :cascade do |t|
+    t.integer  "course_plan_id"
+    t.string   "year"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "course_plan_instances", ["course_plan_id"], name: "index_course_plan_instances_on_course_plan_id"
+
+  create_table "course_plans", force: :cascade do |t|
+    t.integer  "programme_id"
+    t.string   "name"
+    t.string   "abbr"
+    t.string   "type"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "course_plans", ["programme_id"], name: "index_course_plans_on_programme_id"
+
+  create_table "courses", force: :cascade do |t|
+    t.string   "name"
+    t.string   "course_code"
+    t.integer  "credits"
+    t.string   "level"
+    t.string   "grading"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "programmes", force: :cascade do |t|
+    t.string   "name"
+    t.string   "abbr"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
