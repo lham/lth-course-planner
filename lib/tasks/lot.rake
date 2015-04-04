@@ -8,7 +8,7 @@ namespace :lot do
 
   desc 'Parse CEQ reports'
   task :ceq => :environment do
-    #body = Net::HTTP.get(URI.parse('http://www.ceq.lth.se/rapporter/2012_VT/LP1/EDA011_2012_VT_LP1_slutrapport_en.html'))
+    #body = Net::HTTP.get(URI.parse('http://www.ceq.lth.se/rapporter/1970_VT/LP1/XXX000_1970_VT_LP1_slutrapport_en.html'))
     body = File.open('test/web/ceq.html', 'rb', encoding: 'windows-1252')
     doc = Oga.parse_html(body)
 
